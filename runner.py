@@ -1,6 +1,7 @@
 # After you write all your classes, use this file to call them all together and run your program
 from classes.budget import Budget
 
+
 jon_income = {'monthly_income': 14000}
 jon_budget_categories = {'budget_categories': ['living', 'food', 'travel', 'savings', 'leisure']}
 
