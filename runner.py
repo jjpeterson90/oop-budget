@@ -1,27 +1,44 @@
 # After you write all your classes, use this file to call them all together and run your program
 from classes.budget import Budget
 
-
-jon_income = {'monthly_income': 14000}
-jon_budget_categories = {'budget_categories': ['living', 'food', 'travel', 'savings', 'leisure']}
-
-jon = Budget(jon_income, jon_budget_categories)
+#jon_budget_categories = {'budget_categories': ['living', 'food', 'travel', 'savings', 'leisure']}
 
 #  What would you like to do?
 #
-#  1. Update Monthly Income
-#  2. View Budget Details
-#  3. Add Expenses <student_id>
-#  4. Remove Expenses
-#  5. Exit
+#  1. Add Expense
+#  2. Update Monthly Income
+#  3. View Budget Details
+#       1. Budget Breakdown
+#       2. Current Monthly Income
+#       3. My Monthly Costs
+#  4. Exit
 
-menu_prompt = "\nWhat would you like to do?\n\n1. Update Monthly Income\n2. View Budget Details\n3. Add Expenses <student_id>\n4. Remove Expenses\n5. View Budget Details\n5. Exit\n\n"
+MAIN_MENU = "\nWhat would you like to do?\n\n" \
+            "1. Add Expense\n" \
+            "2. Update Monthly Income\n" \
+            "3. View Budget Details\n" \
+            "4. Exit\n\n"
+            
+BUDGET_DETAILS_OPTIONS = "\nSelect one:\n1. Budget Breakdown\n2. Current Monthly Income\n3. My Monthly Costs\n"
 
 print("\nWelcome, Jon!")
 
+jon = Budget()
+
 while True:
-    mode = input(menu_prompt)
+    mode = input(MAIN_MENU)
     if mode == '1':
+        pass # Add Expense
+    if mode == '2':
         jon.update_monthly_income()
-    else:
+    if mode == '3':
+        mode3 = input(BUDGET_DETAILS_OPTIONS)
+        if mode3 == '1':
+            pass
+        if mode3 == '2':
+            pass
+        if mode3 == '3':
+            pass
+    if mode == '4':
+        print("\nGoodbye\n\n")
         break
